@@ -1,12 +1,102 @@
+<style>
+  .contact-form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  .contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #555;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.2s ease-in-out;
+  }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #0077ff;
+    outline: none;
+  }
+
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .contact-form input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+  }
+
+  .contact-form input[type="submit"]:hover {
+    background-color: #333;
+  }
+
+  .with-shaddow{
+  	text-shadow: 1px 1px #555;
+  }
+</style>
+
 <section id="contact">
 	<div class="banner">
 		<div class="container">
 
 			<div class="row">
 				<div class="col-lg-6">
-					<h2>Interesse? Dann schreib uns!</h2>
+					<h2>Interesse? Dann schreibt uns!</h2>
+					<br><br>
+					<p class="lead with-shaddow">
+						Wir freuen uns über jede Anfrage. <br>
+						Gebt uns gerne Informationen zu euren Vorstellungen und ein paar Fakten zu eurem Team und dem potentiellen Drehort.<br><br>
+						Bis bald!
+
+					</p>
 				</div>
 				<div class="col-lg-6">
+					 <form action="https://fabform.io/f/heAiOJ5" method="post" class="contact-form">
+				        <!-- Replace "YOUR_FORM_ENDPOINT" with your actual FabForm form endpoint -->
+
+				        <label for="name">Name:</label>
+				        <input type="text" id="name" name="name" required><br>
+
+				        <label for="email">Email:</label>
+				        <input type="email" id="email" name="email" required><br>
+
+				        <label for="message">Nachricht:</label>
+				        <textarea id="message" name="message" required></textarea><br>
+
+				        <input type="submit" value="Abschicken">
+				    </form>
+
 					<!-- <ul class="list-inline banner-social-buttons">
 						{% for social in site.social %}
 						<li>
